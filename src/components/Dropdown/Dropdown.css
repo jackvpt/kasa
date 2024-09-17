@@ -1,0 +1,42 @@
+/* =========================================== */
+/* VARIABLES */
+/* =========================================== */
+.dropdown-article {
+  max-width: 100%;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.dropdown-item {
+  display: flex;
+  max-height: 54px;
+  background-color: #ff6060;
+  border-radius: 5px;
+  padding: 10px 20px 10px 15px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.dropdown-article img:hover {
+  cursor: pointer;
+}
+
+.dropdown-arrow-down {
+  transform: rotate(180deg);
+  transition: transform 0.2s linear;
+}
+
+.dropdown-arrow-up {
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+}
+
+.dropdown-text {
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+  background-color: #f6f6f6;
+  font-size: 20px;
+  line-height: 32px;
+}/*# sourceMappingURL=Dropdown.css.map */

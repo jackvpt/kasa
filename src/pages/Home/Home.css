@@ -1,0 +1,17 @@
+/* =========================================== */
+/* VARIABLES */
+/* =========================================== */
+.container-cards {
+  max-width: 1160px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}/*# sourceMappingURL=Home.css.map */
