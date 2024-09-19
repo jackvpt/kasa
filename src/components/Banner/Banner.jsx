@@ -8,17 +8,17 @@ function Banner({ origin }) {
     case "home":
       imgsource = imgSource1
       subtitle = "Chez vous, partout et ailleurs"
-      style = "home-banner-image"
+      style = "banner__home"
       break
     case "about":
       imgsource = imgSource2
-      style = "about-banner-image"
+      style = "banner__about"
       break
     default:
       imgsource = imgSource1
   }
   return (
-    <section className="banner-container">
+    <section className="container__banner">
       <div className={style}>
         <img src={imgsource} alt="paysage"></img>
         <h2>{subtitle}</h2>

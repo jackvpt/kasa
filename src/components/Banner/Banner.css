@@ -1,19 +1,19 @@
 /* =========================================== */
 /* VARIABLES */
 /* =========================================== */
-.banner-container {
+.container__banner {
   position: relative;
-  max-width: 1240px;
-  margin: 0 100px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
-  .banner-container {
+  .container__banner {
     margin: 0 20px;
   }
 }
 
-.home-banner-image {
-  margin: 30px auto 0;
+.banner__home {
+  margin: 30px 100px 0 100px;
   height: 223px;
   border: 1px solid black;
   background-color: black;
@@ -23,12 +23,11 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 @media (max-width: 768px) {
-  .home-banner-image {
-    border-radius: 10px;
-    height: 111px;
+  .banner__home {
+    margin: 30px 20px;
   }
 }
-.home-banner-image img {
+.banner__home img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -37,11 +36,17 @@
   opacity: 40%;
 }
 @media (max-width: 768px) {
-  .home-banner-image img {
+  .banner__home img {
     border-radius: 10px;
   }
 }
-.home-banner-image h2 {
+@media (max-width: 768px) {
+  .banner__home {
+    border-radius: 10px;
+    height: 111px;
+  }
+}
+.banner__home h2 {
   margin: 0;
   font-size: 48px;
   font-weight: 700;
@@ -54,7 +59,7 @@
   color: white;
 }
 @media (max-width: 768px) {
-  .home-banner-image h2 {
+  .banner__home h2 {
     font-size: 24px;
     text-align: left;
     left: 30%;
@@ -62,9 +67,9 @@
   }
 }
 
-.about-banner-image {
+.banner__about {
   width: 100%;
-  margin: 30px auto 0;
+  margin: 30px 100px 0 100px;
   height: 223px;
   border: 1px solid black;
   background-color: black;
@@ -73,11 +78,23 @@
   text-align: center;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
-.about-banner-image img {
+@media (max-width: 768px) {
+  .banner__about {
+    margin: 20px 0 10px;
+    height: 111px;
+    border-radius: 10px;
+  }
+}
+.banner__about img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 25px;
   opacity: 70%;
+}
+@media (max-width: 768px) {
+  .banner__about img {
+    border-radius: 10px;
+  }
 }/*# sourceMappingURL=Banner.css.map */

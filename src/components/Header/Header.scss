@@ -1,41 +1,49 @@
 @import "../../variables.scss";
 
 header {
-  max-width: 1240px;
-  margin:0 100px;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   @media (max-width: $responsive-desktop-size) {
-    padding: 0 30px;
+    padding: 0 20px;
   }
   img {
     width: 210px;
     height: 68px;
+    margin-left: 100px;
 
     @media (max-width: $responsive-desktop-size) {
       width: 145px;
       height: 47px;
+      margin-left: 0;
     }
   }
 }
 
-nav {
+.navbar {
   align-content: center;
-  .link,
-  .link-active {
+  margin-right: 100px;
+
+  @media (max-width: $responsive-desktop-size) {
+    margin-right: 0;
+  }
+
+  &__link,
+  &__link--active {
     margin-left: 30px;
-    font-size: 24px;
     text-decoration: none;
     color: black;
     text-align: right;
     @media (max-width: $responsive-desktop-size) {
       font-size: 12px;
+      text-transform: uppercase;
+      margin-left:10px;
     }
   }
-  .link-active {
+  &__link--active {
     text-decoration: underline;
   }
 }
-

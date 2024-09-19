@@ -1,7 +1,7 @@
 import React from "react"
 import "./About.scss"
 import Banner from "../../components/Banner/Banner"
-import Dropdown from "../../components/Dropdown/Dropdown"
+import Collapse from "../../components/Collapse/Collapse"
 
 function LayoutAbout() {
   const dropDowns = [
@@ -25,9 +25,9 @@ function LayoutAbout() {
   return (
     <React.Fragment>
       <Banner origin={"about"}/>
-      <section className="dropdown-section">
+      <section className="section__collapse">
         {dropDowns.map(({ item, text }, index) => (
-          <Dropdown key={index} item={item} text={text} />
+          <Collapse key={index} item={item} text={text} />
         ))}
       </section>
     </React.Fragment>

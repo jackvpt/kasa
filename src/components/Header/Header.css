@@ -2,45 +2,52 @@
 /* VARIABLES */
 /* =========================================== */
 header {
-  max-width: 1240px;
-  margin: 0 100px;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
   header {
-    padding: 0 30px;
+    padding: 0 20px;
   }
 }
 header img {
   width: 210px;
   height: 68px;
+  margin-left: 100px;
 }
 @media (max-width: 768px) {
   header img {
     width: 145px;
     height: 47px;
+    margin-left: 0;
   }
 }
 
-nav {
+.navbar {
   align-content: center;
+  margin-right: 100px;
 }
-nav .link,
-nav .link-active {
+@media (max-width: 768px) {
+  .navbar {
+    margin-right: 0;
+  }
+}
+.navbar__link, .navbar__link--active {
   margin-left: 30px;
-  font-size: 24px;
   text-decoration: none;
   color: black;
   text-align: right;
 }
 @media (max-width: 768px) {
-  nav .link,
-  nav .link-active {
+  .navbar__link, .navbar__link--active {
     font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 10px;
   }
 }
-nav .link-active {
+.navbar__link--active {
   text-decoration: underline;
 }/*# sourceMappingURL=Header.css.map */

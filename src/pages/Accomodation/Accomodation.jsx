@@ -5,7 +5,7 @@ import { accomodations } from "../../data/kasa.js"
 import AccomodationTag from "../../components/AccomodationTag/AccomodationTag.jsx"
 import star_inactive from "../../images/rating_start_inactive.png"
 import star_active from "../../images/rating_star_active.png"
-import Dropdown from "../../components/Dropdown/Dropdown.jsx"
+import Collapse from "../../components/Collapse/Collapse.jsx"
 
 function Accomodation() {
   const parameters = useParams()
@@ -56,8 +56,8 @@ function Accomodation() {
           </div>
         </div>
         <div className="container__details">
-            <Dropdown item="Description" text={accomodation.description} />
-            <Dropdown item="Equipements" text={accomodation.equipments} />
+            <Collapse item="Description" text={accomodation.description} />
+            <Collapse item="Equipements" text={accomodation.equipments} />
 
         </div>
       </section>
