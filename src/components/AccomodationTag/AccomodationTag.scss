@@ -1,0 +1,12 @@
+@import "../../variables.scss";
+
+.container__tag{
+    width:115px;
+    height:25px;
+    background-color: $primary-color;
+    color:white;
+    font-size:14px;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+}

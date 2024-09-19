@@ -2,27 +2,40 @@
 
 header {
   max-width: 1240px;
-  margin: auto;
+  margin:0 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
+
+  @media (max-width: $responsive-desktop-size) {
+    padding: 0 30px;
+  }
   img {
     width: 210px;
     height: 68px;
+
+    @media (max-width: $responsive-desktop-size) {
+      width: 145px;
+      height: 47px;
+    }
   }
 }
 
 nav {
   align-content: center;
-  .link, .link-active {
+  .link,
+  .link-active {
     margin-left: 30px;
     font-size: 24px;
     text-decoration: none;
     color: black;
     text-align: right;
+    @media (max-width: $responsive-desktop-size) {
+      font-size: 12px;
+    }
   }
   .link-active {
     text-decoration: underline;
   }
 }
+

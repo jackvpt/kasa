@@ -1,27 +1,22 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./Home.scss"
 import Banner from "../../components/Banner/Banner.jsx"
 import Card from "../../components/card/Card.jsx"
-import { cards } from "../../data/kasa.js"
-import imgSource1 from "../../images/img_source_1.jpg"
+import { accomodations } from "../../data/kasa.js"
 
 function Home() {
   return (
     <React.Fragment>
-            <Banner origin={"home"}/>
-      {/* <section className="home-top-container">
-        <div className="home-top-image">
-          <img
-            src={imgSource1}
-            alt="paysage"
-          ></img>
-          <h2>Chez vous, partout et ailleurs</h2>
+      <Banner origin={"home"} />
+      <section className="container-main">
+        <div className="container-cards">
+          {accomodations.map(({ id, title, cover }) => (
+            <Link key={id} to={`/accomodation/${id}`}>
+              <Card key={id} id={id} title={title} cover={cover} />
+            </Link>
+          ))}
         </div>
-      </section> */}
-      <section className="container-cards">
-        {cards.map(({ id, title, cover }, index) => (
-          <Card key={id} id={id} title={title} cover={cover} />
-        ))}
       </section>
     </React.Fragment>
   )

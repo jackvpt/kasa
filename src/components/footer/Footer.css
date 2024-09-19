@@ -2,6 +2,7 @@
 /* VARIABLES */
 /* =========================================== */
 footer {
+  padding: 0 120px;
   height: 210px;
   background-color: black;
   display: flex;
@@ -21,4 +22,10 @@ footer p {
   color: white;
   font-size: 24px;
   font-weight: 500;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  footer p {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=Footer.css.map */

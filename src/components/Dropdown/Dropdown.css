@@ -2,7 +2,7 @@
 /* VARIABLES */
 /* =========================================== */
 .dropdown-article {
-  max-width: 100%;
+  width: 100%;
   flex-direction: column;
   padding: 20px 0;
 }
@@ -19,6 +19,10 @@
   justify-content: space-between;
 }
 
+.dropdown-article img {
+  width: 24px;
+  height: 24px;
+}
 .dropdown-article img:hover {
   cursor: pointer;
 }
@@ -37,6 +41,9 @@
   padding: 20px;
   border-radius: 0 0 5px 5px;
   background-color: #f6f6f6;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 32px;
+}
+.dropdown-text li {
+  list-style-type: none;
 }/*# sourceMappingURL=Dropdown.css.map */

@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .dropdown-article {
-  max-width: 100%;
+  width: 100%;
   flex-direction: column;
   padding: 20px 0;
 }
@@ -18,26 +18,30 @@
   justify-content: space-between;
 }
 .dropdown-article img {
+  width:24px;
+  height:24px;
   &:hover {
     cursor: pointer;
   }
 }
 
-.dropdown-arrow-down{
-    transform: rotate(180deg);
-    transition: transform 0.2s linear;
-  }
-  
-  .dropdown-arrow-up{
-    transform: rotate(0deg);
-    transition: transform 0.2s linear;
-  }
+.dropdown-arrow-down {
+  transform: rotate(180deg);
+  transition: transform 0.2s linear;
+}
 
+.dropdown-arrow-up {
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+}
 
 .dropdown-text {
   padding: 20px;
   border-radius: 0 0 5px 5px;
   background-color: $primary-bg-color;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 32px;
+  li{
+    list-style-type: none;
+  }
 }
