@@ -3,10 +3,12 @@
 /* =========================================== */
 .section__collapse {
   margin: 30px auto;
-  max-width: 1023px;
+  max-width: 1240px;
+  padding: 0 100px;
 }
 @media (max-width: 768px) {
   .section__collapse {
-    margin: 0 20px 20px;
+    margin: 0 0 20px;
+    padding: 0 20px;
   }
 }/*# sourceMappingURL=About.css.map */
