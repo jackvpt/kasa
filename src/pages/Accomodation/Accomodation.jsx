@@ -19,15 +19,6 @@ export default function Accomodation() {
 
   const nmberOfPictures = accomodation.pictures.length
 
-  // useEffect(() => {
-  //   if (pictureDisplayed>=nmberOfPictures){
-  //     setPictureDisplayed(0)
-  //   }
-  //   if (pictureDisplayed<0){
-  //     setPictureDisplayed(nmberOfPictures)
-  //   }
-  // }, [pictureDisplayed])
-
   function pictureBack() {
     pictureDisplayed - 1 < 0
       ? setPictureDisplayed(nmberOfPictures - 1)
@@ -66,7 +57,49 @@ export default function Accomodation() {
             {pictureDisplayed + 1}/{nmberOfPictures}
           </p>
         </div>
-        <div className="container__description">
+        
+        <div className="container__location-tags-host-rating">
+          <div className="container__location-tags">
+            <div className="container__location-tags__location">
+              <h2>{accomodation.title}</h2>
+              <h3>{accomodation.location}</h3>
+            </div>
+            <div className="container__location-tags__tags">
+              {accomodation.tags.map((tag, index) => (
+                <div key={index}>
+                  <AccomodationTag tag={tag} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="container__tags-rating">
+            <div className="container__description-host">
+              <p className="host__name">{accomodation.host.name}</p>
+              <div className="host__picture">
+                <img
+                  src={accomodation.host.picture}
+                  alt={accomodation.host.name}
+                  width="64"
+                  height="64"
+                ></img>
+              </div>
+            </div>
+
+            <div className="container__rating">
+              {[1, 2, 3, 4, 5].map((idx) => (
+                <img
+                  key={idx}
+                  src={idx < accomodation.rating ? star_active : star_inactive}
+                  alt="rating"
+                  wdith="24"
+                  height="24"
+                ></img>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* <div className="container__description">
           <div className="container__description-location">
             <h2>{accomodation.title}</h2>
             <h3>{accomodation.location}</h3>
@@ -102,7 +135,7 @@ export default function Accomodation() {
               ></img>
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="container__details">
           <div className="details__description">
             <Collapse item="Description" text={accomodation.description} />
