@@ -12,18 +12,45 @@
 
 .container__carrousel {
   margin: 0 100px;
+  position: relative;
   @media (max-width: $responsive-desktop-size) {
     height: 255px;
   }
-  img {
+  .accomodation__picture {
     object-fit: cover;
     width: 100%;
     border-radius: 25px;
     @media (max-width: $responsive-desktop-size) {
       border-radius: 10px;
       height: 255px;
-
     }
+  }
+  .picture__arrow_back {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .picture__arrow_forward {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .picture__number{
+    font-size:18px;
+    font-weight: 500;
+    position:absolute;
+    color:white;
+    left:50%;
+    bottom:15px;
   }
 }
 

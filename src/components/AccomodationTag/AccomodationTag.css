@@ -2,7 +2,8 @@
 /* VARIABLES */
 /* =========================================== */
 .container__tag {
-  width: 115px;
+  min-width: 95px;
+  padding: 0 10px;
   height: 25px;
   background-color: #ff6060;
   color: white;

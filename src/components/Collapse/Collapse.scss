@@ -32,6 +32,15 @@
   @media (max-width: $responsive-desktop-size) {
     margin: 0;
     font-size: 18px;
+
+    h2 {
+      margin:0;
+      color: white;
+      font-size: 24px;
+      @media (max-width: $responsive-desktop-size) {
+        font-size: 13px;
+      }
+    }
   }
 }
 
@@ -56,9 +65,9 @@
   @media (max-width: $responsive-desktop-size) {
     margin: 0;
   }
-  ul{
-    margin:0;
-    padding:0;
+  ul {
+    margin: 0;
+    padding: 0;
   }
   li {
     list-style-type: none;
