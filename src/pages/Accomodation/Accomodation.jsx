@@ -104,8 +104,12 @@ export default function Accomodation() {
           </div>
         </div>
         <div className="container__details">
-          <Collapse item="Description" text={accomodation.description} />
-          <Collapse item="Equipements" text={accomodation.equipments} />
+          <div className="details__description">
+            <Collapse item="Description" text={accomodation.description} />
+          </div>
+          <div className="details__description">
+            <Collapse item="Equipements" text={accomodation.equipments} />
+          </div>
         </div>
       </section>
     </React.Fragment>

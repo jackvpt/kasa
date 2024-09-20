@@ -1,13 +1,9 @@
 @import "../../variables.scss";
 
 .article__collapse {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 10px 0;
-
-  @media (max-width: $responsive-desktop-size) {
-  }
 
   img {
     width: 24px;
@@ -24,7 +20,7 @@
 
 .collapse__item {
   display: flex;
-  margin: 0 100px 0;
+  margin: 0  0;
   background-color: $primary-color;
   border-radius: 5px;
   padding: 10px 20px 10px 15px;

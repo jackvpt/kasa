@@ -1,13 +1,19 @@
 @import "../../variables.scss";
 
-.container__tag{
-    min-width:95px;
-    padding:0 10px;
-    height:25px;
-    background-color: $primary-color;
-    color:white;
-    font-size:14px;
-    border-radius: 10px;
-    text-align: center;
-    align-content: center;
+.container__tag {
+  min-width: 95px;
+  padding: 0 10px;
+  height: 25px;
+  background-color: $primary-color;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+  @media (max-width: $responsive-desktop-size) {
+    min-width: 84px;
+    height: 18px;
+    font-size: 10px;
+  }
 }
