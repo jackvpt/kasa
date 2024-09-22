@@ -1,8 +1,7 @@
 /* =========================================== */
 /* VARIABLES */
 /* =========================================== */
-.card {
-  max-width: 340px;
+.container__card {
   height: 340px;
   border-radius: 10px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
@@ -10,11 +9,11 @@
   position: relative;
 }
 @media (max-width: 768px) {
-  .card {
+  .container__card {
     max-height: 255px;
   }
 }
-.card h3 {
+.container__card h3 {
   font-size: 18px;
   font-weight: 700;
   color: white;
@@ -24,12 +23,12 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2509803922);
 }
 @media (max-width: 768px) {
-  .card h3 {
+  .container__card h3 {
     bottom: 10px;
   }
 }
 
-.img-cover {
+.card__img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -37,7 +36,7 @@
   border-radius: 10px;
 }
 @media (max-width: 768px) {
-  .img-cover {
+  .card__img {
     height: 255px;
   }
 }/*# sourceMappingURL=Card.css.map */

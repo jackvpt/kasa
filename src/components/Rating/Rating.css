@@ -5,4 +5,14 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+.container__rating img {
+  background-color: blue;
+}
+@media (max-width: 768px) {
+  .container__rating img {
+    width: 18px;
+    height: 18px;
+    background-color: blue;
+  }
 }/*# sourceMappingURL=Rating.css.map */

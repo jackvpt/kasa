@@ -1,6 +1,27 @@
 /* =========================================== */
 /* VARIABLES */
 /* =========================================== */
+.container__carrousel {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .container__carrousel {
+    height: 255px;
+  }
+}
+.container__carrousel .accomodation__picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 25px;
+}
+@media (max-width: 768px) {
+  .container__carrousel .accomodation__picture {
+    border-radius: 10px;
+    height: 255px;
+  }
+}
+
 .picture__arrow_back {
   position: absolute;
   top: 50%;
@@ -9,6 +30,18 @@
 }
 .picture__arrow_back:hover {
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .picture__arrow_back {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .picture__arrow_back {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .picture__arrow_forward {
@@ -20,6 +53,18 @@
 .picture__arrow_forward:hover {
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .picture__arrow_forward {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .picture__arrow_forward {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 .picture__number {
   font-size: 18px;
@@ -28,4 +73,9 @@
   color: white;
   left: 50%;
   bottom: 15px;
+}
+@media (max-width: 768px) {
+  .picture__number {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=Carrousel.css.map */

@@ -1,25 +1,39 @@
 @import "../../variables.scss";
 
 .container__host {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 
-    &__name {
-      font-size: 18px;
-      text-align: right;
-      color: $primary-color;
-      width: 80px;
-      margin-right: 10px;
+  &__name {
+    font-size: 18px;
+    text-align: right;
+    color: $primary-color;
+    width: 80px;
+    margin-right: 10px;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 12px;
     }
-
-    &__picture {
-        width: 64px;
-        height: 64px;
-        border-radius: 64px;
-        background-color: grey;
-        img {
-          border-radius: 32px;
-        }
-      }
   }
+
+  &__picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background-color: grey;
+    img {
+      border-radius: 32px;
+      @media (max-width: $breakpoint-mobile) {
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+      }
+    }
+    @media (max-width: $breakpoint-mobile) {
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+    }
+  }
+}

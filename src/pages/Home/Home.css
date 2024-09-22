@@ -1,34 +1,58 @@
 /* =========================================== */
 /* VARIABLES */
 /* =========================================== */
-.container-main {
+.container__main {
   max-width: 1240px;
-  padding: 0 100px;
   margin: auto;
+  padding: 0 100px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container__main {
+    padding: 0 100px;
+  }
 }
 @media (max-width: 768px) {
-  .container-main {
+  .container__main {
     padding: 0;
   }
 }
 
-.container-cards {
-  max-width: 1160px;
+.container__cards {
   margin: 40px auto;
-  padding: 40px;
+  padding: 30px;
   background-color: #f6f6f6;
   border-radius: 25px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  flex-flow: row wrap;
   flex-wrap: wrap;
-  row-gap: 40px;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  justify-content: space-between;
+  gap: 30px;
 }
 @media (max-width: 768px) {
-  .container-cards {
+  .container__cards {
+    margin: 20px auto;
+    padding: 0;
+  }
+}
+.container__cards a {
+  width: 29%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container__cards a {
+    width: 46%;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .container__cards a {
+    width: 100%;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .container__cards {
     padding: 0 20px;
     background-color: white;
     flex-direction: column;

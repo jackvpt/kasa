@@ -1,7 +1,13 @@
 @import "../../variables.scss";
 
 .container__rating {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  img {
+    @media (max-width: $breakpoint-mobile) {
+      width: 18px;
+      height: 18px;
+    }
   }
+}

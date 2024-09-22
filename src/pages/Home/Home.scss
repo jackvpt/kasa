@@ -1,33 +1,57 @@
 @import "../../variables.scss";
 
-.container-main {
+.container__main {
   max-width: 1240px;
-  padding: 0 100px;
   margin: auto;
-  @media (max-width: $breakpoint-mobile) {
-    padding: 0;
+  padding: 0 100px;
+
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+    padding: 0 100px;
+
+  }
+
+  @media (max-width: $breakpoint-mobile)  {
+    padding: 0 ;
+
   }
 }
-.container-cards {
-  max-width: 1160px;
+
+.container__cards {
   margin: 40px auto;
-  padding: 40px;
+  padding: 30px;
+  @media (max-width: $breakpoint-mobile) {
+    margin: 20px auto;
+    padding: 0;
+  }
+
   background-color: $primary-bg-color;
   border-radius: 25px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  flex-flow: row wrap;
   flex-wrap: wrap;
-  row-gap: 40px;
-  column-gap: 40px;
+  justify-content: space-between;
+  gap: 30px;
 
+  a {
+    width: 29%;
+    object-fit: cover;
+
+    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+      width: 46%;
+      gap: 20px;
+    }
+
+    @media (max-width: $breakpoint-mobile)  {
+      width: 100%;
+      gap: 20px;
+    }
+  }
 
   @media (max-width: $breakpoint-mobile) {
     padding: 0 20px;
     background-color: white;
     flex-direction: column;
 
-    row-gap:20px;
+    row-gap: 20px;
   }
 }

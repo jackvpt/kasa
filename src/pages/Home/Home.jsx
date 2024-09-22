@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./Home.scss"
 import Banner from "../../components/Banner/Banner.jsx"
-import Card from "../../components/card/Card.jsx"
-// import { accomodations } from "../../public/kasa_accomodations.json"
+import Card from "../../components/Card/Card.jsx"
 import { useFetch } from "../../utils/useFetch.jsx"
 
 function Home() {
@@ -15,8 +14,8 @@ function Home() {
     accomodations && (
       <React.Fragment>
         <Banner origin={"home"} />
-        <section className="container-main">
-          <div className="container-cards">
+        <section className="container__main">
+          <div className="container__cards">
             {accomodations.map(({ id, title, cover }) => (
               <Link key={id} to={`/accomodation/${id}`}>
                 <Card key={id} id={id} title={title} cover={cover} />

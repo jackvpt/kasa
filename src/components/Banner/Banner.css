@@ -18,7 +18,7 @@
 }
 @media (max-width: 768px) {
   .container__banner-home {
-    margin: 30px 20px;
+    margin: 20px;
   }
 }
 .container__banner-home img {
@@ -84,7 +84,7 @@
 }
 @media (max-width: 768px) {
   .container__banner-about {
-    margin: 20px 0 10px;
+    margin: 20px 20px 10px;
     height: 111px;
     border-radius: 10px;
   }

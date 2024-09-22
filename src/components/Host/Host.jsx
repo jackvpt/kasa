@@ -5,7 +5,7 @@ export default function Host({ name, picture }) {
   return (
     <React.Fragment>
       <div className="container__host">
-        <p className="container__host__name">{name}</p>
+        <p className="container__host__name">{name.split(" ")[0]}<br/>{name.split(" ")[1]}</p>
         <div className="container__host__picture">
           <img
             src={picture}

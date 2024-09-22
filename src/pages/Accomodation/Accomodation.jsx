@@ -40,7 +40,7 @@ export default function Accomodation() {
               name={accomodation.host.name}
               picture={accomodation.host.picture}
             />
-            <Rating rate={accomodation.rating} />
+            <Rating rate={accomodation.rating} maxRate={5} />
           </div>
         </div>
 

@@ -1,13 +1,15 @@
 @import "../../variables.scss";
 
-.section__collapse{
-    margin:30px auto;
-    max-width:1040px;
-    padding:0 200px;
-    @media (max-width: $breakpoint-mobile) {
-        margin: 0 0 20px;
-        padding:0 20px;
-      }
+.section__collapse {
+  margin: 30px auto;
+  max-width: 1040px;
+  padding: 0 200px;
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0 0 10px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+    padding: 0 150px;
+  }
 }
-
-
