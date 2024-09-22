@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import "./Collapse.scss"
-import collapseArrow from "../../images/dropdown-closed.png"
+import collapseArrow from "../../assets/images/dropdown-closed.png"
 
 export default function Collapse({ item, text }) {
   const [textActive, setTextActive] = useState(false)
   let textList = []
 
   typeof text === "string" ? (textList[0] = text) : (textList = text)
+
+  const contentRef = useRef()
 
   return (
     <article className="article__collapse">
@@ -21,15 +23,22 @@ export default function Collapse({ item, text }) {
           onClick={() => setTextActive(!textActive)}
         ></img>
       </div>
-      {textActive && (
-        <div className="collapse__text">
-          <ul>
-            {textList.map((element) => (
-              <li>{element}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+
+      <div
+        className="collapse__text"
+        ref={contentRef}
+        style={
+          textActive
+            ? { height: contentRef.current.scrollHeight + 20 + "px" }
+            : { height: "0px" }
+        }
+      >
+        <ul>
+          {textList.map((element, index) => (
+            <li key={index}>{element}</li>
+          ))}
+        </ul>
+      </div>
     </article>
   )
 }

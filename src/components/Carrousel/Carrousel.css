@@ -1,0 +1,31 @@
+/* =========================================== */
+/* VARIABLES */
+/* =========================================== */
+.picture__arrow_back {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.picture__arrow_back:hover {
+  cursor: pointer;
+}
+
+.picture__arrow_forward {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+.picture__arrow_forward:hover {
+  cursor: pointer;
+}
+
+.picture__number {
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  color: white;
+  left: 50%;
+  bottom: 15px;
+}/*# sourceMappingURL=Carrousel.css.map */

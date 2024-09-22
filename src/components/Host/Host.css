@@ -1,0 +1,24 @@
+/* =========================================== */
+/* VARIABLES */
+/* =========================================== */
+.container__host {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.container__host__name {
+  font-size: 18px;
+  text-align: right;
+  color: #ff6060;
+  width: 80px;
+  margin-right: 10px;
+}
+.container__host__picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+  background-color: grey;
+}
+.container__host__picture img {
+  border-radius: 32px;
+}/*# sourceMappingURL=Host.css.map */

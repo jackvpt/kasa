@@ -4,7 +4,7 @@
   max-width: 1240px;
   padding: 0 100px;
   margin: auto;
-  @media (max-width: $responsive-desktop-size) {
+  @media (max-width: $responsive-mobile-size) {
     padding: 0;
   }
 }
@@ -21,7 +21,9 @@
   flex-wrap: wrap;
   row-gap: 40px;
   column-gap: 40px;
-  @media (max-width: $responsive-desktop-size) {
+
+
+  @media (max-width: $responsive-mobile-size) {
     padding: 0 20px;
     background-color: white;
     flex-direction: column;

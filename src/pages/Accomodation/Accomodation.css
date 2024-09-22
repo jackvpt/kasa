@@ -121,12 +121,6 @@
   gap: 10px;
 }
 
-.container__rating {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
 .container__details {
   max-width: 1240px;
   margin: 20px 0;

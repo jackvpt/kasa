@@ -1,0 +1,8 @@
+/* =========================================== */
+/* VARIABLES */
+/* =========================================== */
+.container__rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}/*# sourceMappingURL=Rating.css.map */

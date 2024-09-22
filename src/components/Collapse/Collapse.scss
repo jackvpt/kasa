@@ -11,7 +11,7 @@
     &:hover {
       cursor: pointer;
     }
-    @media (max-width: $responsive-desktop-size) {
+    @media (max-width: $responsive-mobile-size) {
       width: 16px;
       height: 16px;
     }
@@ -20,13 +20,13 @@
 
 .collapse__item {
   display: flex;
-  margin: 0  0;
+  margin: 0 0;
   background-color: $primary-color;
   border-radius: 5px;
   padding: 10px 20px 10px 15px;
   color: white;
   justify-content: space-between;
-  @media (max-width: $responsive-desktop-size) {
+  @media (max-width: $responsive-mobile-size) {
     margin: 0;
     font-size: 18px;
 
@@ -34,7 +34,7 @@
       color: white;
       font-size: 24px;
       font-weight: 700;
-      @media (max-width: $responsive-desktop-size) {
+      @media (max-width: $responsive-mobile-size) {
         font-size: 13px;
       }
     }
@@ -53,21 +53,25 @@
 
 .collapse__text {
   display: flex;
-  margin: 0 100px;
-  padding: 20px;
+  margin: 0;
   border-radius: 0 0 5px 5px;
   background-color: $primary-bg-color;
   font-size: 18px;
   line-height: 26px;
-  @media (max-width: $responsive-desktop-size) {
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+
+  @media (max-width: $responsive-mobile-size) {
     margin: 0;
     font-size: 12px;
     line-height: 18px;
   }
+
   ul {
-    margin: 0;
+    margin: 20px;
     padding: 0;
   }
+
   li {
     list-style-type: none;
   }

@@ -1,5 +1,5 @@
-import imgSource1 from "../../images/img_source_1.jpg"
-import imgSource2 from "../../images/img_source_2.jpg"
+import imgSource1 from "../../assets/images/img_source_1.jpg"
+import imgSource2 from "../../assets/images/img_source_2.jpg"
 import "./Banner.scss"
 
 function Banner({ origin }) {
