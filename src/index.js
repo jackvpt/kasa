@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom/client'
 import "./index.scss"
-import Router from "./components/Router/Router"
+import App from './App'
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
-  <Router />
+  <App />
 )

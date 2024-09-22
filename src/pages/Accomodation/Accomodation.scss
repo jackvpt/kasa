@@ -6,7 +6,7 @@
   margin: 30px auto;
   display: flex;
   flex-direction: column;
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     padding: 0 20px;
     margin: 0 auto;
   }
@@ -14,14 +14,14 @@
 
 .container__carrousel {
   position: relative;
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     height: 255px;
   }
   .accomodation__picture {
     object-fit: cover;
     width: 100%;
     border-radius: 25px;
-    @media (max-width: $responsive-mobile-size) {
+    @media (max-width: $breakpoint-mobile) {
       border-radius: 10px;
       height: 255px;
     }
@@ -91,7 +91,7 @@
     }
   }
 
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     margin: 10px 0;
   }
 }
@@ -127,14 +127,14 @@
   justify-content: space-between;
   gap: 10px;
 
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     flex-direction: column;
   }
 }
 
 .details__description {
   width: 47%;
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     width: 100%;
   }
 }

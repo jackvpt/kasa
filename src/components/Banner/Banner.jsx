@@ -3,16 +3,15 @@ import imgSource2 from "../../assets/images/img_source_2.jpg"
 import "./Banner.scss"
 
 function Banner({ origin }) {
-  let [imgsource, subtitle, style] = ""
+  let [imgsource, style] = ""
   switch (origin) {
     case "home":
       imgsource = imgSource1
-      subtitle = "Chez vous, partout et ailleurs"
-      style = "banner__home"
+      style = "container__banner-home"
       break
     case "about":
       imgsource = imgSource2
-      style = "banner__about"
+      style = "container__banner-about"
       break
     default:
       imgsource = imgSource1
@@ -21,7 +20,7 @@ function Banner({ origin }) {
     <section className="container__banner">
       <div className={style}>
         <img src={imgsource} alt="paysage"></img>
-        <h2>{subtitle}</h2>
+        {origin==="home" && <h2>Chez vous,<span className="span__crlf"><br/></span> partout et ailleurs</h2>}
       </div>
     </section>
   )

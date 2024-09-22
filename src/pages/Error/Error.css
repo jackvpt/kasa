@@ -1,24 +1,58 @@
 /* =========================================== */
 /* VARIABLES */
 /* =========================================== */
-.error-section {
+.container__error {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 30px;
 }
-.error-section h1 {
+.container__error h1 {
   font-size: 288px;
   color: #ff6060;
   margin: 80px auto;
 }
-.error-section h2 {
+@media (max-width: 768px) {
+  .container__error h1 {
+    font-size: 96px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container__error h1 {
+    font-size: 192px;
+  }
+}
+.container__error h2 {
   font-size: 36px;
   color: #ff6060;
   margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
 }
-.error-section .link {
+@media (max-width: 768px) {
+  .container__error h2 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container__error h2 {
+    font-size: 24px;
+  }
+}
+.container__error-link {
   font-size: 18px;
   color: black;
   text-decoration: underline;
+  text-align: center;
   margin: 120px auto 80px;
+}
+@media (max-width: 768px) {
+  .container__error-link {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container__error-link {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=Error.css.map */

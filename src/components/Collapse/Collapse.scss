@@ -11,7 +11,7 @@
     &:hover {
       cursor: pointer;
     }
-    @media (max-width: $responsive-mobile-size) {
+    @media (max-width: $breakpoint-mobile) {
       width: 16px;
       height: 16px;
     }
@@ -26,7 +26,7 @@
   padding: 10px 20px 10px 15px;
   color: white;
   justify-content: space-between;
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     margin: 0;
     font-size: 18px;
 
@@ -34,7 +34,7 @@
       color: white;
       font-size: 24px;
       font-weight: 700;
-      @media (max-width: $responsive-mobile-size) {
+      @media (max-width: $breakpoint-mobile) {
         font-size: 13px;
       }
     }
@@ -61,7 +61,7 @@
   overflow: hidden;
   transition: height 0.5s ease-in-out;
 
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     margin: 0;
     font-size: 12px;
     line-height: 18px;

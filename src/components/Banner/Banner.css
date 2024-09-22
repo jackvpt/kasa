@@ -6,13 +6,7 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
-  .container__banner {
-    margin: 0;
-  }
-}
-
-.banner__home {
+.container__banner-home {
   margin: 30px 100px 0 100px;
   height: 223px;
   border: 1px solid black;
@@ -23,11 +17,11 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 @media (max-width: 768px) {
-  .banner__home {
+  .container__banner-home {
     margin: 30px 20px;
   }
 }
-.banner__home img {
+.container__banner-home img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -36,18 +30,19 @@
   opacity: 40%;
 }
 @media (max-width: 768px) {
-  .banner__home img {
+  .container__banner-home img {
     border-radius: 10px;
   }
 }
 @media (max-width: 768px) {
-  .banner__home {
+  .container__banner-home {
     border-radius: 10px;
     height: 111px;
   }
 }
-.banner__home h2 {
+.container__banner-home h2 {
   margin: 0;
+  padding: 30px;
   font-size: 48px;
   font-weight: 700;
   position: absolute;
@@ -58,16 +53,26 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2509803922);
   color: white;
 }
+.container__banner-home h2 .span__crlf {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container__banner-home h2 {
+    font-size: 36px;
+  }
+}
 @media (max-width: 768px) {
-  .banner__home h2 {
+  .container__banner-home h2 {
     font-size: 24px;
     text-align: left;
     left: 30%;
     transform: translate(-30%, -50%);
   }
+  .container__banner-home h2 .span__crlf {
+    display: inline;
+  }
 }
-
-.banner__about {
+.container__banner-about {
   margin: 30px 100px 0 100px;
   height: 223px;
   border: 1px solid black;
@@ -78,13 +83,13 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
 }
 @media (max-width: 768px) {
-  .banner__about {
+  .container__banner-about {
     margin: 20px 0 10px;
     height: 111px;
     border-radius: 10px;
   }
 }
-.banner__about img {
+.container__banner-about img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -93,7 +98,7 @@
   opacity: 70%;
 }
 @media (max-width: 768px) {
-  .banner__about img {
+  .container__banner-about img {
     border-radius: 10px;
   }
 }/*# sourceMappingURL=Banner.css.map */

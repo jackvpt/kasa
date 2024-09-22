@@ -7,6 +7,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 768px) {
   header {
@@ -21,18 +22,34 @@ header img {
 @media (max-width: 768px) {
   header img {
     width: 145px;
-    height: 47px;
+    height: 48px;
     margin-left: 0;
+  }
+}
+@media (max-width: 375px) {
+  header img {
+    width: 100px;
+    height: 33px;
   }
 }
 
 .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   align-content: center;
   margin-right: 100px;
 }
 @media (max-width: 768px) {
   .navbar {
     margin-right: 0;
+  }
+}
+@media (max-width: 375px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 8px;
   }
 }
 .navbar__link, .navbar__link--active {

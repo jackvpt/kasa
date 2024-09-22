@@ -4,7 +4,7 @@
     margin:30px auto;
     max-width:1040px;
     padding:0 200px;
-    @media (max-width: $responsive-mobile-size) {
+    @media (max-width: $breakpoint-mobile) {
         margin: 0 0 20px;
         padding:0 20px;
       }

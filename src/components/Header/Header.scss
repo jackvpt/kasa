@@ -6,8 +6,9 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     padding: 0 20px;
   }
   img {
@@ -15,20 +16,34 @@ header {
     height: 68px;
     margin-left: 100px;
 
-    @media (max-width: $responsive-mobile-size) {
+    @media (max-width: $breakpoint-mobile) {
       width: 145px;
-      height: 47px;
+      height: 48px;
       margin-left: 0;
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+      width: 100px;
+      height: 33px;
     }
   }
 }
 
 .navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   align-content: center;
   margin-right: 100px;
 
-  @media (max-width: $responsive-mobile-size) {
+  @media (max-width: $breakpoint-mobile) {
     margin-right: 0;
+  }
+
+  @media (max-width: $breakpoint-xxs) {
+    flex-direction: column;
+    justify-content: space-around;
+    gap:8px;
   }
 
   &__link,
@@ -38,10 +53,10 @@ header {
     text-decoration: none;
     color: black;
     text-align: right;
-    @media (max-width: $responsive-mobile-size) {
+    @media (max-width: $breakpoint-mobile) {
       font-size: 12px;
       text-transform: uppercase;
-      margin-left:10px;
+      margin-left: 10px;
     }
   }
   &__link--active {
