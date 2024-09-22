@@ -1,7 +1,7 @@
 import "./Footer.scss";
 import logo from "../../assets/images/logo_kasa_white.png"
 
-function Footer() {
+export default function Footer() {
     return (
         <footer>
             <img
@@ -13,5 +13,3 @@ function Footer() {
 
     );
 }
-
-export default Footer;

@@ -3,7 +3,7 @@ import "./Header.scss"
 import { Link, NavLink } from "react-router-dom"
 import logo from "../../assets/images/logo_kasa.png"
 
-function Header() {
+export default function Header() {
   return (
     <header>
       <Link to="/">
@@ -31,4 +31,3 @@ function Header() {
   )
 }
 
-export default Header

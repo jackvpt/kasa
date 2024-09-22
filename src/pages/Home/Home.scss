@@ -7,33 +7,30 @@
 
   @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
     padding: 0 100px;
-
   }
 
-  @media (max-width: $breakpoint-mobile)  {
-    padding: 0 ;
-
+  @media (max-width: $breakpoint-mobile) {
+    padding: 0;
   }
 }
 
 .container__cards {
   margin: 40px auto;
   padding: 30px;
+  background-color: $primary-bg-color;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+
   @media (max-width: $breakpoint-mobile) {
     margin: 20px auto;
     padding: 0;
   }
 
-  background-color: $primary-bg-color;
-  border-radius: 25px;
-  display: flex;
-  flex-flow: row wrap;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-
   a {
-    width: 29%;
+    width: 30%;
     object-fit: cover;
 
     @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
@@ -41,7 +38,7 @@
       gap: 20px;
     }
 
-    @media (max-width: $breakpoint-mobile)  {
+    @media (max-width: $breakpoint-mobile) {
       width: 100%;
       gap: 20px;
     }

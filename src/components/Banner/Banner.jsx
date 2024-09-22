@@ -2,7 +2,7 @@ import imgSource1 from "../../assets/images/img_source_1.jpg"
 import imgSource2 from "../../assets/images/img_source_2.jpg"
 import "./Banner.scss"
 
-function Banner({ origin }) {
+export default function Banner({ origin }) {
   let [imgsource, style] = ""
   switch (origin) {
     case "home":
@@ -26,4 +26,4 @@ function Banner({ origin }) {
   )
 }
 
-export default Banner
+

@@ -5,7 +5,7 @@ import Banner from "../../components/Banner/Banner.jsx"
 import Card from "../../components/Card/Card.jsx"
 import { useFetch } from "../../utils/useFetch.jsx"
 
-function Home() {
+export default function Home() {
   const fetchResult = useFetch("kasa_accomodations.json")
 
   const accomodations = fetchResult.fetchedData
@@ -27,5 +27,3 @@ function Home() {
     )
   )
 }
-
-export default Home

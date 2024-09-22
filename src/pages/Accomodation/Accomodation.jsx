@@ -1,15 +1,20 @@
 import React from "react"
 import { useParams, Navigate } from "react-router-dom"
 import "./Accomodation.scss"
-import { accomodations } from "../../data/kasa.js"
+// import { accomodations } from "../../data/kasa.js"
 import Tag from "../../components/Tag/Tag.jsx"
 import Collapse from "../../components/Collapse/Collapse.jsx"
 import Carrousel from "../../components/Carrousel/Carrousel.jsx"
 import Host from "../../components/Host/Host.jsx"
 import Rating from "../../components/Rating/Rating.jsx"
+import { useFetch } from "../../utils/useFetch.jsx"
 
 export default function Accomodation() {
   const parameters = useParams()
+
+  const fetchResult = useFetch("kasa_accomodations.json")
+  const accomodations = fetchResult.fetchedData
+  
   const accomodation = accomodations.find(
     (element) => element.id === parameters.id
   )

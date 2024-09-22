@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'react-router-dom'
 import "./Error.scss"
 
-function Error() {
+export default function Error() {
   return (
     <section className="container__error">
       <h1>404</h1>
@@ -14,4 +14,4 @@ function Error() {
   )
 }
 
-export default Error
+
