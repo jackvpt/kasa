@@ -8,7 +8,12 @@
 }
 @media (max-width: 768px) {
   .section__collapse {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     padding: 0 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section__collapse {
+    padding: 0 150px;
   }
 }/*# sourceMappingURL=About.css.map */

@@ -2,13 +2,15 @@
 
 .container__carrousel {
   position: relative;
+
   @media (max-width: $breakpoint-mobile) {
     height: 255px;
   }
-  .accomodation__picture {
+  .accomodationPicture {
     object-fit: cover;
     width: 100%;
     border-radius: 25px;
+
     @media (max-width: $breakpoint-mobile) {
       border-radius: 10px;
       height: 255px;
@@ -23,6 +25,7 @@
   &:hover {
     cursor: pointer;
   }
+
   @media (max-width: $breakpoint-mobile) {
     width: 24px;
     height: 24px;
@@ -42,6 +45,7 @@
   &:hover {
     cursor: pointer;
   }
+  
   @media (max-width: $breakpoint-mobile) {
     width: 24px;
     height: 24px;

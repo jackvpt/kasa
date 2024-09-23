@@ -7,14 +7,15 @@ export default function Header() {
   return (
     <header>
       <Link to="/">
-        <img src={logo} alt="logo kasa"></img>
+        <img src={logo} alt="logo kasa"></img>{" "}
+        {/* Clicking on image links to Home page */}
       </Link>
       <nav className="navbar">
         <NavLink
           className={({ isActive }) =>
             isActive ? "navbar__link--active" : "navbar__link"
           }
-          to="/"
+          to="/" // Links to Home page
         >
           Accueil
         </NavLink>
@@ -22,7 +23,7 @@ export default function Header() {
           className={({ isActive }) =>
             isActive ? "navbar__link--active" : "navbar__link"
           }
-          to="/about"
+          to="/about" // Links to About page
         >
           A Propos
         </NavLink>
@@ -30,4 +31,3 @@ export default function Header() {
     </header>
   )
 }
-

@@ -4,6 +4,8 @@ import "./Banner.scss"
 
 export default function Banner({ origin }) {
   let [imgsource, style] = ""
+
+  // 2 possible origins: 'home' (with text) and 'about' (without text)
   switch (origin) {
     case "home":
       imgsource = imgSource1
@@ -19,8 +21,8 @@ export default function Banner({ origin }) {
   return (
     <section className="container__banner">
       <div className={style}>
-        <img src={imgsource} alt="paysage"></img>
-        {origin==="home" && <h2>Chez vous,<span className="span__crlf"><br/></span> partout et ailleurs</h2>}
+        <img src={imgsource} alt="paysage"></img>  {/* Image is different according to origin */}
+        {origin==="home" && <h2>Chez vous,<span className="span__crlf"><br/></span> partout et ailleurs</h2>} {/* No text if origin is 'about' */}
       </div>
     </section>
   )

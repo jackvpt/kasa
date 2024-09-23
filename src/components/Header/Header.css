@@ -26,7 +26,7 @@ header img {
     margin-left: 0;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 370px) {
   header img {
     width: 100px;
     height: 33px;
@@ -45,7 +45,7 @@ header img {
     margin-right: 0;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 370px) {
   .navbar {
     flex-direction: column;
     justify-content: space-around;

@@ -10,7 +10,12 @@ export function useFetch(url) {
 		setLoading(true)
 		async function fetchData() {
 			try {
-				const response = await fetch(url)
+				const response = await fetch(url,{
+					headers:{
+						"Content-Type": "application/json",
+						Accept: "application/json"
+					}
+				})
 				const data = await response.json()
 				setFetchedData(data)
 			} catch (err) {

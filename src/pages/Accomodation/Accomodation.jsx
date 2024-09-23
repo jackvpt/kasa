@@ -10,14 +10,24 @@ import Rating from "../../components/Rating/Rating.jsx"
 import { useFetch } from "../../utils/useFetch.jsx"
 
 export default function Accomodation() {
+  // Fetch call returns 'fetchData', 'isLoading' and 'error'
+  const fetchResult = useFetch("/kasa_accomodations.json")
+
+  // Get id from Home page
   const parameters = useParams()
 
-  const fetchResult = useFetch("kasa_accomodations.json")
+  // Check if fetch isLoading or if error
+  if (fetchResult.isLoading || !fetchResult.fetchedData) {
+    return
+  }
+
+  // Get data from fetch
   const accomodations = fetchResult.fetchedData
-  
-  const accomodation = accomodations.find(
-    (element) => element.id === parameters.id
-  )
+  let accomodation
+
+  if (accomodations) {
+    accomodation = accomodations.find((element) => element.id === parameters.id)
+  }
 
   if (!accomodation) {
     return <Navigate to="*" />
@@ -25,7 +35,7 @@ export default function Accomodation() {
 
   return (
     <React.Fragment>
-      <section className="container__accomodation">
+      <section className="container__main">
         <Carrousel props={accomodation} />
         <div className="container__location-tags-host-rating">
           <div className="container__location-tags">
@@ -34,7 +44,7 @@ export default function Accomodation() {
               <h3>{accomodation.location}</h3>
             </div>
             <div className="container__location-tags__tags">
-              {accomodation.tags.map((tagName, index) => (
+              {accomodation.tags.map((tagName, index) => ( // Iterate through tags
                 <Tag key={index} tagName={tagName} />
               ))}
             </div>

@@ -15,8 +15,9 @@
 }
 @media (max-width: 768px) {
   .container__tag {
-    min-width: 84px;
+    min-width: 60px;
     height: 18px;
+    padding: 0 5px;
     font-size: 10px;
   }
 }/*# sourceMappingURL=Tag.css.map */

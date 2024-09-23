@@ -4,9 +4,11 @@ import Banner from "../../components/Banner/Banner"
 import Collapse from "../../components/Collapse/Collapse"
 import { useFetch } from "../../utils/useFetch"
 
-function LayoutAbout() {
-  const fetchResult = useFetch("kasa_about.json")
+export default function LayoutAbout() {
+  // Fetch call returns 'fetchData', 'isLoading' and 'error'
+  const fetchResult = useFetch("/kasa_about.json")
 
+  // Get data from fetch
   const abouts = fetchResult.fetchedData
 
   return (
@@ -14,13 +16,16 @@ function LayoutAbout() {
       <React.Fragment>
         <Banner origin={"about"} />
         <section className="section__collapse">
-          {abouts.map(({ item, text }, index) => (
-            <Collapse key={index} item={item} text={text} />
-          ))}
+          {abouts.map(
+            (
+              { item, text },
+              index // Iterate through about items
+            ) => (
+              <Collapse key={index} item={item} text={text} />
+            )
+          )}
         </section>
       </React.Fragment>
     )
   )
 }
-
-export default LayoutAbout

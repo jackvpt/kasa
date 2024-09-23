@@ -6,8 +6,10 @@ export default function Collapse({ item, text }) {
   const [textActive, setTextActive] = useState(false)
   let textList = []
 
+  // Using List to display li in container
   typeof text === "string" ? (textList[0] = text) : (textList = text)
 
+  // using useRef for animation
   const contentRef = useRef()
 
   return (
@@ -20,13 +22,14 @@ export default function Collapse({ item, text }) {
           alt="collapse arrow"
           width="24"
           height="24"
-          onClick={() => setTextActive(!textActive)}
+          onClick={() => setTextActive(!textActive)} // Togle textActive
         ></img>
       </div>
 
       <div
         className="collapse__text"
         ref={contentRef}
+        // Slide animation
         style={
           textActive
             ? { height: contentRef.current.scrollHeight + 20 + "px" }

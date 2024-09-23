@@ -11,6 +11,12 @@
     &:hover {
       cursor: pointer;
     }
+
+    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+      width: 20px;
+      height: 20px;
+    }
+
     @media (max-width: $breakpoint-mobile) {
       width: 16px;
       height: 16px;
@@ -20,23 +26,24 @@
 
 .collapse__item {
   display: flex;
-  margin: 0 0;
+  margin: 0;
   background-color: $primary-color;
   border-radius: 5px;
   padding: 10px 20px 10px 15px;
   color: white;
   justify-content: space-between;
-  @media (max-width: $breakpoint-mobile) {
-    margin: 0;
-    font-size: 18px;
 
-    h2 {
-      color: white;
-      font-size: 24px;
-      font-weight: 700;
-      @media (max-width: $breakpoint-mobile) {
-        font-size: 13px;
-      }
+  h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+
+    @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 13px;
     }
   }
 }
@@ -59,10 +66,9 @@
   font-size: 18px;
   line-height: 26px;
   overflow: hidden;
-  transition: height 0.5s ease-in-out;
+  transition: height 0.4s ease-in-out;
 
   @media (max-width: $breakpoint-mobile) {
-    margin: 0;
     font-size: 12px;
     line-height: 18px;
   }
@@ -76,3 +82,4 @@
     list-style-type: none;
   }
 }
+

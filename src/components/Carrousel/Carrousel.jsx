@@ -8,10 +8,13 @@ export default function Carrousel({props}) {
     const numberOfPictures = props.pictures.length
 
     function pictureBack() {
+      // If first picture is displayed and back button is clicked, picture displayed is last one
         pictureDisplayed - 1 < 0
           ? setPictureDisplayed(numberOfPictures - 1)
           : setPictureDisplayed(pictureDisplayed - 1)
       }
+
+      // If last picture is displayed and next button is clicked, picture displayed is first one
       function pictureForward() {
         pictureDisplayed + 1 >= numberOfPictures
           ? setPictureDisplayed(0)
@@ -22,13 +25,14 @@ export default function Carrousel({props}) {
   return (
     <div className="container__carrousel">
       <img
-        className="accomodation__picture"
+        className="accomodationPicture"
         src={props.pictures[pictureDisplayed]}
         alt={props.title}
         width="1240"
         height="415"
       ></img>
 
+      {/* Display arrows and picture number only if number of pictures > 1 */}
       {numberOfPictures > 1 && (
         <div>
           <img
