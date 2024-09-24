@@ -17,6 +17,7 @@
 @media (max-width: 768px) {
   .container__host__name {
     font-size: 12px;
+    margin: 0 12px 0 0;
   }
 }
 .container__host__picture {

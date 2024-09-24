@@ -22,7 +22,7 @@ export default function Collapse({ item, text }) {
           alt="collapse arrow"
           width="24"
           height="24"
-          onClick={() => setTextActive(!textActive)} // Togle textActive
+          onClick={() => setTextActive(!textActive)} // Toggle textActive
         ></img>
       </div>
 

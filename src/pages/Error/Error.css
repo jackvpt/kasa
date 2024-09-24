@@ -28,6 +28,7 @@
   margin: 0 auto;
   text-align: center;
   font-weight: 500;
+  line-height: 26px;
 }
 @media (max-width: 768px) {
   .container__error h2 {
@@ -44,7 +45,7 @@
   color: black;
   text-decoration: underline;
   text-align: center;
-  margin: 120px auto 80px;
+  margin: 120px auto 100px;
 }
 @media (max-width: 768px) {
   .container__error-link {
