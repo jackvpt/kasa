@@ -1,8 +1,8 @@
 import "./Card.css"
 
-export default function Card({ id, title, cover }) {
+export default function Card({ title, cover }) {
   return (
-    <article key={id} className="container__card">
+    <article className="container__card">
       <img
         className="card__img"
         src={cover}

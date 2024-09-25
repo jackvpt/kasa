@@ -3,24 +3,23 @@ import "./Carrousel.scss"
 import arrow_back from "../../assets/images/arrow_back.png"
 import arrow_forward from "../../assets/images/arrow_forward.png"
 
-export default function Carrousel({props}) {
-    const [pictureDisplayed, setPictureDisplayed] = useState(0)
-    const numberOfPictures = props.pictures.length
+export default function Carrousel({ props }) {
+  const [pictureDisplayed, setPictureDisplayed] = useState(0)
+  const numberOfPictures = props.pictures.length
 
-    function pictureBack() {
-      // If first picture is displayed and back button is clicked, picture displayed is last one
-        pictureDisplayed - 1 < 0
-          ? setPictureDisplayed(numberOfPictures - 1)
-          : setPictureDisplayed(pictureDisplayed - 1)
-      }
+  function pictureBack() {
+    // If first picture is displayed and back button is clicked, picture displayed is last one
+    pictureDisplayed - 1 < 0
+      ? setPictureDisplayed(numberOfPictures - 1)
+      : setPictureDisplayed(pictureDisplayed - 1)
+  }
 
-      // If last picture is displayed and next button is clicked, picture displayed is first one
-      function pictureForward() {
-        pictureDisplayed + 1 >= numberOfPictures
-          ? setPictureDisplayed(0)
-          : setPictureDisplayed(pictureDisplayed + 1)
-      }
-
+  // If last picture is displayed and next button is clicked, picture displayed is first one
+  function pictureForward() {
+    pictureDisplayed + 1 >= numberOfPictures
+      ? setPictureDisplayed(0)
+      : setPictureDisplayed(pictureDisplayed + 1)
+  }
 
   return (
     <div className="container__carrousel">

@@ -6,16 +6,16 @@ import Card from "../../components/Card/Card.jsx"
 import { useFetch } from "../../utils/useFetch.jsx"
 
 export default function Home() {
-  // Fetch call returns 'fetchData', 'isLoading' and 'error'
+  // Fetch call returns 'data', 'isLoading' and 'error'
   const fetchResult = useFetch("/kasa_accomodations.json")
 
   // Get data from fetch
   const accomodations = fetchResult.data
 
   return (
-    accomodations && ( // Check if accomodations is not empty
-      <React.Fragment>
-        <Banner origin={"home"} />
+    <React.Fragment>
+      <Banner origin={"home"} />
+      {accomodations && ( // Check if accomodations is not empty
         <section className="container__main">
           <div className="container__cards">
             {accomodations.map(
@@ -23,13 +23,13 @@ export default function Home() {
                 { id, title, cover } // Iterate through accomodations
               ) => (
                 <Link key={id} to={`/accomodation/${id}`}>
-                  <Card key={id} id={id} title={title} cover={cover} />
+                  <Card title={title} cover={cover} />
                 </Link>
               )
             )}
           </div>
         </section>
-      </React.Fragment>
-    )
+      )}
+    </React.Fragment>
   )
 }

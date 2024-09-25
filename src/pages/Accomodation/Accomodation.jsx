@@ -1,7 +1,6 @@
 import React from "react"
 import { useParams, Navigate } from "react-router-dom"
 import "./Accomodation.scss"
-// import { accomodations } from "../../data/kasa.js"
 import Tag from "../../components/Tag/Tag.jsx"
 import Collapse from "../../components/Collapse/Collapse.jsx"
 import Carrousel from "../../components/Carrousel/Carrousel.jsx"
@@ -10,11 +9,11 @@ import Rating from "../../components/Rating/Rating.jsx"
 import { useFetch } from "../../utils/useFetch.jsx"
 
 export default function Accomodation() {
-  // Fetch call returns 'fetchData', 'isLoading' and 'error'
-  const fetchResult = useFetch("/kasa_accomodations.json")
-
   // Get id from Home page
   const parameters = useParams()
+
+  // Fetch call returns 'data', 'isLoading' and 'error'
+  const fetchResult = useFetch("/kasa_accomodations.json")
 
   // Check if fetch isLoading or if error
   if (fetchResult.isLoading || !fetchResult.data) {
@@ -25,12 +24,13 @@ export default function Accomodation() {
   const accomodations = fetchResult.data
   let accomodation
 
+  // Get accomodation based on id
   if (accomodations) {
     accomodation = accomodations.find((element) => element.id === parameters.id)
   }
 
   if (!accomodation) {
-    return <Navigate to="*" />
+    return <Navigate to="*" /> // Navigate to Error page
   }
 
   return (
@@ -44,9 +44,14 @@ export default function Accomodation() {
               <h3>{accomodation.location}</h3>
             </div>
             <div className="container__location-tags__tags">
-              {accomodation.tags.map((tagName, index) => ( // Iterate through tags
-                <Tag key={index} tagName={tagName} />
-              ))}
+              {accomodation.tags.map(
+                (
+                  tagName,
+                  index // Iterate through tags
+                ) => (
+                  <Tag key={index} tagName={tagName} />
+                )
+              )}
             </div>
           </div>
 
