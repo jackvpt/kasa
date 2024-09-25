@@ -18,7 +18,7 @@
 }
 
 .container__cards {
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 30px;
   background-color: #f6f6f6;
   border-radius: 25px;
@@ -29,8 +29,11 @@
 }
 @media (max-width: 768px) {
   .container__cards {
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 0;
+    background-color: white;
+    flex-direction: column;
+    row-gap: 20px;
   }
 }
 .container__cards a {
@@ -48,13 +51,5 @@
   .container__cards a {
     width: 100%;
     gap: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .container__cards {
-    padding: 0 20px;
-    background-color: white;
-    flex-direction: column;
-    row-gap: 20px;
   }
 }/*# sourceMappingURL=Home.css.map */

@@ -12,6 +12,7 @@
     color: $primary-color;
     width: 80px;
     margin-right: 10px;
+    overflow-wrap: break-word;
     @media (max-width: $breakpoint-mobile) {
       font-size: 12px;
       margin : 0 12px 0 0;

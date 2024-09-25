@@ -13,6 +13,7 @@
   color: #ff6060;
   width: 80px;
   margin-right: 10px;
+  word-wrap: break-word;
 }
 @media (max-width: 768px) {
   .container__host__name {

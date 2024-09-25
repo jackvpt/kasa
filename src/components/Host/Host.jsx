@@ -6,10 +6,7 @@ export default function Host({ name, picture }) {
     <React.Fragment>
       <div className="container__host">
         <p className="container__host__name">
-          {/* WARNING : ISSUE expected if name is not composed by first name and last name */}
-          {name.split(" ")[0]} {/* First name */}
-          <br />
-          {name.split(" ")[1]} {/* Last name */}
+          {name}
         </p>
         <div className="container__host__picture">
           <img src={picture} alt={name} width="64" height="64"></img>

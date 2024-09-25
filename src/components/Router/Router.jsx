@@ -12,12 +12,14 @@ export default function Router() {
     <React.StrictMode>
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/accomodation/:id" element={<Accomodation />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/accomodation/:id" element={<Accomodation />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </main>
         <Footer />
       </BrowserRouter>
     </React.StrictMode>
