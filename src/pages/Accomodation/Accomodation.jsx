@@ -17,12 +17,12 @@ export default function Accomodation() {
   const parameters = useParams()
 
   // Check if fetch isLoading or if error
-  if (fetchResult.isLoading || !fetchResult.fetchedData) {
+  if (fetchResult.isLoading || !fetchResult.data) {
     return
   }
 
   // Get data from fetch
-  const accomodations = fetchResult.fetchedData
+  const accomodations = fetchResult.data
   let accomodation
 
   if (accomodations) {

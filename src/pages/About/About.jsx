@@ -9,7 +9,7 @@ export default function LayoutAbout() {
   const fetchResult = useFetch("/kasa_about.json")
 
   // Get data from fetch
-  const abouts = fetchResult.fetchedData
+  const abouts = fetchResult.data
 
   return (
     abouts && (

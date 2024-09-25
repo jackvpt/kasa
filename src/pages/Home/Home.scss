@@ -27,6 +27,9 @@
   @media (max-width: $breakpoint-mobile) {
     margin: 20px auto;
     padding: 0;
+    background-color: white;
+    flex-direction: column;
+    row-gap: 20px;
   }
 
   a {
@@ -42,13 +45,5 @@
       width: 100%;
       gap: 20px;
     }
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    padding: 0 20px;
-    background-color: white;
-    flex-direction: column;
-
-    row-gap: 20px;
   }
 }
