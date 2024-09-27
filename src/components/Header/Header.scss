@@ -3,6 +3,7 @@
 header {
   max-width: 1440px;
   margin: 0;
+  padding:0 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,7 +16,6 @@ header {
   img {
     width: 210px;
     height: 68px;
-    margin-left: 100px;
 
     @media (max-width: $breakpoint-mobile) {
       width: 145px;
@@ -35,7 +35,6 @@ header {
   flex-direction: row;
   align-items: center;
   align-content: center;
-  margin-right: 100px;
 
   @media (max-width: $breakpoint-mobile) {
     margin-right: 0;
