@@ -2,12 +2,10 @@
 
 header {
   max-width: 1440px;
-  margin: 0;
   padding:0 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 
   @media (max-width: $breakpoint-mobile) {
     padding: 0 20px;

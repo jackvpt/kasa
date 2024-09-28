@@ -6,10 +6,12 @@ import logo from "../../assets/images/logo_kasa.png"
 export default function Header() {
   return (
     <header>
-      <Link to="/">
-        <img src={logo} alt="logo kasa"></img>{" "}
-        {/* Clicking on image links to Home page */}
-      </Link>
+      <div>
+        <Link to="/">
+          <img src={logo} alt="logo kasa"></img>{" "}
+          {/* Clicking on image links to Home page */}
+        </Link>
+      </div>
       <nav className="navbar">
         <NavLink
           className={({ isActive }) =>
@@ -31,5 +33,3 @@ export default function Header() {
     </header>
   )
 }
-
-
