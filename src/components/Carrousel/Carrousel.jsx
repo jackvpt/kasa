@@ -23,13 +23,13 @@ export default function Carrousel({ props }) {
 
   return (
     <div className="container__carrousel">
-      <img
-        className="accomodationPicture"
-        src={props.pictures[pictureDisplayed]}
-        alt={props.title}
-        width="1240"
-        height="415"
-      ></img>
+      <div className="carousel-slider" style={{ transform: `translateX(-${pictureDisplayed * 100}%)` }}>
+        {props.pictures.map((image, index) => (
+          <div className="carousel-slide" key={index}>
+            <img className="accomodationPicture" src={image} alt={`Slide ${index}`} />
+          </div>
+        ))}
+      </div>
 
       {/* Display arrows and picture number only if number of pictures > 1 */}
       {numberOfPictures > 1 && (

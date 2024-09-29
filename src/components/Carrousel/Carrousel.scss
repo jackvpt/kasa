@@ -2,21 +2,41 @@
 
 .container__carrousel {
   position: relative;
+  overflow: hidden;
+  // width: 100%;
 
   @media (max-width: $breakpoint-mobile) {
     height: 255px;
   }
+
+  .carousel-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
   .accomodationPicture {
     object-fit: cover;
     width: 100%;
     border-radius: 25px;
-   
+    height: 415px;
+
     @media (max-width: $breakpoint-mobile) {
       border-radius: 10px;
       height: 255px;
     }
   }
 }
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}
+
 .picture__arrow_back {
   position: absolute;
   top: 50%;
@@ -45,7 +65,7 @@
   &:hover {
     cursor: pointer;
   }
-  
+
   @media (max-width: $breakpoint-mobile) {
     width: 24px;
     height: 24px;
@@ -67,6 +87,5 @@
 
   @media (max-width: $breakpoint-mobile) {
     font-size: 12px;
-
   }
 }
