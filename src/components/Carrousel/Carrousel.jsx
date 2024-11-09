@@ -23,10 +23,17 @@ export default function Carrousel({ props }) {
 
   return (
     <div className="container__carrousel">
-      <div className="carousel-slider" style={{ transform: `translateX(-${pictureDisplayed * 100}%)` }}>
+      <div
+        className="carousel-slider"
+        style={{ transform: `translateX(-${pictureDisplayed * 100}%)` }}
+      >
         {props.pictures.map((image, index) => (
           <div className="carousel-slide" key={index}>
-            <img className="accomodationPicture" src={image} alt={`Slide ${index}`} />
+            <img
+              className="accomodationPicture"
+              src={image}
+              alt={index}
+            />
           </div>
         ))}
       </div>
